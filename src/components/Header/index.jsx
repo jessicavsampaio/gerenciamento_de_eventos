@@ -21,6 +21,9 @@ export function Header() {
                     <Link to={`/src/pages/Locais/locais.jsx`}>
                         Locais
                     </Link>
+                    <Link to={`/src/pages/Cadastro/cadastro.jsx`}>
+                        Cadastro
+                    </Link>
                     <Link to={`/src/pages/Login/login.jsx`}>
                         Login
                     </Link>
