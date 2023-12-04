@@ -44,5 +44,7 @@ export const SectionCadastroDiv = styled.div`
         gap: 10px;
         color: black;
         font-size: 16px;
+        padding: 5px;
+        margin-top: 40px;
     }
 `;
