@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CardEventDiv = styled.div`
     background-color: #413E48;
     border-radius: 15px;
-    margin: 0 480px;
+    margin: 0 480px 15px;
     padding: 40px;
 
     h3 {
@@ -30,6 +30,11 @@ export const CardEventDiv = styled.div`
         font-size: 16px;
     }
 
+    .CardEventInfo svg {
+        height: 24px;
+        width: 24px;
+    }
+
     .CardEventBtn {
         display: flex;
         flex-direction: column;
@@ -44,7 +49,7 @@ export const CardEventDiv = styled.div`
     }
 
     .CardEventBtn button:hover {
-        opacity: 0.5;
+        opacity: 0.8;
         cursor: pointer;
     }
 
@@ -62,9 +67,5 @@ export const CardEventDiv = styled.div`
         flex-direction: column;
         gap: 15px;
         margin-top: 30px;
-    }
-
-    .CardEventDescription p:first-child {
-        
     }
 `;

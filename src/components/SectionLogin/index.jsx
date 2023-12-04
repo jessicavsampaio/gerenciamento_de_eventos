@@ -9,19 +9,19 @@ export function SectionLogin() {
             <div className='Container'>
                 <div className='Section'>
                     <h3>Login</h3>
-                    <div className="email">
+                    <div className="formLabel">
                         <TfiEmail />
-                        <p>email</p>
-                        <input type="email" name="email" id="email" required />
+                        <label htmlFor="email">email</label>
                     </div>
-                    <div className="senha">
+                    <input type="email" name="email" id="email" required />
+                    <div className="formLabel">
                         <RiLockPasswordLine />
-                        <p>senha</p>
-                        <input type="password" name="" id="senha" required />
+                        <label htmlFor="senha">senha</label>
                     </div>
-                    <div>
-                        <button className="cadastroBtn" type="submit">Logar</button>
-                    </div>
+                    <input type="password" name="" id="senha" required />
+
+                    <button className="cadastroBtn" type="submit">Logar</button>
+
                 </div>
             </div>
 

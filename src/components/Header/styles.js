@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
-    grid-area: header;
     height: 90px;
     background-color: #B0A695;
     display: flex;
@@ -9,6 +8,7 @@ export const HeaderDiv = styled.div`
     padding: 0 85px;
     align-items: center;
     font-size: 20px;
+    width: 100%;
     
     > div > a {
         font-family: 'Roboto Slab', serif;

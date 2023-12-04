@@ -4,16 +4,15 @@ import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 
 export function Home() {
-    return(
+    return (
         <div>
+            <Header />
             <div>
-                <Header />
+                <Section title="Eventos" />
+                <CardEvent />
+                <CardEvent />
             </div>
-            <Section title="Eventos" />
-            <CardEvent />
-            <div>
-                <Footer />
-            </div>
+            <Footer />
         </div>
 
     )

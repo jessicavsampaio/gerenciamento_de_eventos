@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SectionCadastroDiv = styled.div`
+export const CardCriarEventoDiv = styled.div`
     background-color: #413E48;
     border-radius: 15px;
     margin: 0 480px 15px;
@@ -12,42 +12,49 @@ export const SectionCadastroDiv = styled.div`
         margin-bottom: 10px;
     }
 
-    .Section {
+    form {
         display: flex;
         flex-direction: column;
         gap: 5px;
     }
 
-    .formLabel {
+    form > div {
         display: flex;
         gap: 10px;
         color: #ffffff;
         font-size: 16px;
     }
 
-    svg {
-        width: 24px;
-        height: 24px;
+    .formLabel {
+        display: flex;
+        align-items: center;
     }
 
-    input {
+    input,
+    select,
+    textarea {
         margin-bottom: 10px;
         border-radius: 15px;
         padding: 7px 14px;
     }
 
-    .cadastroBtn {
+    svg {
+        height: 24px;
+        width: 24px;
+    }
+       
+    .cadastroEventoBtn {
         border-radius: 15px;
         padding: 7px;
         border: none;
         color: #ffffff;
         background-color: #ff9000;
-        width: 140px;
+        width: 120px;
         align-self: center;
         margin-top: 20px;
     }
 
-    .cadastroBtn:hover {
+    .cadastroEventoBtn:hover {
         opacity: 0.8;
         cursor: pointer;
     }

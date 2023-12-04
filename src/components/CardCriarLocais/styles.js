@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SectionCadastroDiv = styled.div`
+export const CardCriarLocaisDiv = styled.div`
     background-color: #413E48;
     border-radius: 15px;
     margin: 0 480px 15px;
@@ -18,8 +18,9 @@ export const SectionCadastroDiv = styled.div`
         gap: 5px;
     }
 
-    .formLabel {
+    .local {
         display: flex;
+        align-items: center;
         gap: 10px;
         color: #ffffff;
         font-size: 16px;
@@ -36,7 +37,7 @@ export const SectionCadastroDiv = styled.div`
         padding: 7px 14px;
     }
 
-    .cadastroBtn {
+    .cadastroLocalBtn {
         border-radius: 15px;
         padding: 7px;
         border: none;
@@ -47,7 +48,7 @@ export const SectionCadastroDiv = styled.div`
         margin-top: 20px;
     }
 
-    .cadastroBtn:hover {
+    .cadastroLocalBtn:hover {
         opacity: 0.8;
         cursor: pointer;
     }

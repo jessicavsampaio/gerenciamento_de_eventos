@@ -9,24 +9,22 @@ export function SectionCadastro() {
             <div className='Container'>
                 <div className='Section'>
                     <h3>Cadastro</h3>
-                    <div className="nome">
+                    <div className="formLabel">
                         <IoIosPerson />
-                        <p>nome</p>
-                        <input type="text" required />
+                        <label htmlFor="nome">nome</label>
                     </div>
-                    <div className="email">
+                    <input id="nome" type="text" required />
+                    <div className="formLabel">
                         <TfiEmail />
-                        <p>email</p>
-                        <input type="email" name="email" id="email" required />
+                        <label htmlFor="email">email</label>
                     </div>
-                    <div className="senha">
+                    <input type="email" name="email" id="email" required />
+                    <div className="formLabel">
                         <RiLockPasswordLine />
-                        <p>senha</p>
-                        <input type="password" name="" id="senha" required />
+                        <label htmlFor="senha">senha</label>
                     </div>
-                    <div>
-                        <button className="cadastroBtn" type="submit">Cadastrar</button>
-                    </div>
+                    <input type="password" name="" id="senha" required />
+                    <button className="cadastroBtn" type="submit">Cadastrar</button>
                 </div>
             </div>
 

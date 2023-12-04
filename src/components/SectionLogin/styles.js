@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SectionLoginDiv = styled.div`
     background-color: #413E48;
     border-radius: 15px;
-    margin: 0 500px;
+    margin: 0 480px 15px;
     padding: 40px;
 
     h3 {
@@ -14,37 +14,41 @@ export const SectionLoginDiv = styled.div`
 
     .Section {
         display: flex;
-        align-items: center;
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
     }
 
-    .nome {
+    .formLabel {
         display: flex;
         gap: 10px;
         color: #ffffff;
         font-size: 16px;
     }
 
-    .email {
-        display: flex;
-        gap: 10px;
-        color: #ffffff;
-        font-size: 16px;
+    svg {
+        width: 24px;
+        height: 24px;
     }
-    .senha {
-        display: flex;
-        gap: 10px;
-        color: #ffffff;
-        font-size: 16px;
+
+    input {
+        margin-bottom: 10px;
+        border-radius: 15px;
+        padding: 7px 14px;
     }
 
     .cadastroBtn {
-        display: flex;
-        gap: 10px;
-        color: black;
-        font-size: 16px;
-        padding: 5px;
-        margin-top: 40px;
+        border-radius: 15px;
+        padding: 7px;
+        border: none;
+        color: #ffffff;
+        background-color: #ff9000;
+        width: 140px;
+        align-self: center;
+        margin-top: 20px;
+    }
+
+    .cadastroBtn:hover {
+        opacity: 0.8;
+        cursor: pointer;
     }
 `;
