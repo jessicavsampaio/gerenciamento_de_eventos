@@ -27,7 +27,7 @@ export function CardEvent() {
             </div>
             <div className="CardEventDescription">
                 <p><strong>Descrição:</strong></p>
-                <p>Um evento voltado para os amantes de Front-end ou para quem deseja expandir horizontes.0</p>
+                <p>Um evento voltado para os amantes de Front-end ou para quem deseja expandir horizontes.</p>
             </div>
 
 
