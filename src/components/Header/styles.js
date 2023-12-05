@@ -32,4 +32,9 @@ export const HeaderNav = styled.nav`
     > a:hover {
         color: #ffffff; 
     }
+
+    svg{
+        width: 30px;
+        height: 30px;
+    }
 `;

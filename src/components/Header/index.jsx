@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { HeaderDiv, HeaderNav } from './styles'
+import {BiUserCircle } from 'react-icons/bi'
 
 export function Header() {
     return (
@@ -22,11 +23,9 @@ export function Header() {
                     Locais
                 </Link>
                 <Link to={`/src/pages/Cadastro/cadastro.jsx`}>
-                    Cadastro
+                    <BiUserCircle />
                 </Link>
-                <Link to={`/src/pages/Login/login.jsx`}>
-                    Login
-                </Link>
+                
             </HeaderNav>
         </HeaderDiv>
 
