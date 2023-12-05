@@ -1,6 +1,7 @@
 import { CardCriarEventoDiv } from './styles'
 import { BiCalendar, BiMap, BiPurchaseTag } from 'react-icons/bi';
 import { BsFileText } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 export function CardCriarEvento() {
     return (
@@ -23,6 +24,9 @@ export function CardCriarEvento() {
                         <BiMap />
                         <label htmlFor="localDoEvento">Local: </label>
                     </div>
+                    <Link to={`/src/pages/Locais/locais.jsx`}>
+                        Criar novo local
+                    </Link>
                     <select id="localDoEvento" name="locais" required>
                         <option>--Por favor escolha uma opção--</option>
                     </select>
@@ -31,6 +35,9 @@ export function CardCriarEvento() {
                         <BiPurchaseTag />
                         <label htmlFor="categoriaDoEvento">Categoria: </label>
                     </div>
+                    <Link to={`/src/pages/Categorias/categorias.jsx`}>
+                        Criar nova categoria
+                    </Link>
                     <select id="categoriaDoEvento" name="categorias" required>
                         <option>--Por favor escolha uma opção--</option>
                     </select>

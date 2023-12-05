@@ -42,6 +42,15 @@ export const CardCriarEventoDiv = styled.div`
         height: 24px;
         width: 24px;
     }
+
+    a {
+        color:#fff;
+    
+    }
+
+    a:hover{
+        color: #ff9000;
+    }
        
     .cadastroEventoBtn {
         border-radius: 15px;
@@ -58,4 +67,5 @@ export const CardCriarEventoDiv = styled.div`
         opacity: 0.8;
         cursor: pointer;
     }
+
 `;

@@ -36,6 +36,15 @@ export const SectionCadastroDiv = styled.div`
         padding: 7px 14px;
     }
 
+    a {
+        color:#fff;
+        align-self:center;
+    }
+
+    a:hover{
+        color: #ff9000;
+    }
+
     .cadastroBtn {
         border-radius: 15px;
         padding: 7px;

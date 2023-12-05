@@ -2,6 +2,7 @@ import { SectionCadastroDiv } from './styles'
 import { RiLockPasswordLine } from "react-icons/ri";
 import { TfiEmail } from "react-icons/tfi";
 import { IoIosPerson } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 export function SectionCadastro() {
     return (
@@ -24,6 +25,9 @@ export function SectionCadastro() {
                         <label htmlFor="senha">senha</label>
                     </div>
                     <input type="password" name="" id="senha" required />
+                    <Link to={`/src/pages/Login/login.jsx`}>
+                        Já possuo cadastro
+                    </Link>
                     <button className="cadastroBtn" type="submit">Cadastrar</button>
                 </div>
             </div>
