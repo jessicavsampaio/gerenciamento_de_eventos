@@ -21,6 +21,7 @@ export function SectionLogin() {
                     <input type="password" name="" id="senha" required />
 
                     <button className="cadastroBtn" type="submit">Logar</button>
+                    <p className="formLabel linkCriarConta">Não tem conta?<a href="/src/pages/Cadastro/cadastro.jsx" className='linkStyle'>Cadastre-se</a></p>
 
                 </div>
             </div>

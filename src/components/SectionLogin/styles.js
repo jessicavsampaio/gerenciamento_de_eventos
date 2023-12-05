@@ -51,4 +51,13 @@ export const SectionLoginDiv = styled.div`
         opacity: 0.8;
         cursor: pointer;
     }
+
+    .linkCriarConta{
+      justify-content: center;
+      margin-top: 10px;
+      
+    }
+    .linkStyle{
+      color: #ff9000;
+    }
 `;
