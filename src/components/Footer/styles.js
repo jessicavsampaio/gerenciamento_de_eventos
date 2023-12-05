@@ -11,5 +11,5 @@ export const FooterDiv = styled.div`
     font-size: 12px;
     gap: 10px;
     bottom: 0;
-    position: fixed;
+    position: relative;
 `;

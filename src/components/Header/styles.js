@@ -9,6 +9,8 @@ export const HeaderDiv = styled.div`
     align-items: center;
     font-size: 20px;
     width: 100%;
+    position: fixed;
+    top: 0;
     
     > div > a {
         font-family: 'Roboto Slab', serif;
