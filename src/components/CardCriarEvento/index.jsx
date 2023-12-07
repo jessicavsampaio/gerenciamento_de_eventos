@@ -16,9 +16,9 @@ export function CardCriarEvento() {
 
                     <div className="formLabel">
                         <BiCalendar />
-                        <label htmlFor="datetime">Data: </label>
+                        <label htmlFor="date">Data: </label>
                     </div>
-                    <input type="datetime-local" name="datetime" id="datetime" placeholder="Data" required />
+                    <input type="date" name="date" id="date" placeholder="Data" required />
 
                     <div className="formLabel">
                         <BiMap />

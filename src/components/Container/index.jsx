@@ -6,7 +6,7 @@ export function Container({ title }) {
     return (
         <ContainerDiv>
             <h1>{title}</h1>
-            <Link to={`/src/pages/CriarEvento/criarEvento.jsx`}>
+            <Link to={`/evento`}>
                 Criar novo
                 <BiAddToQueue />
             </Link>
