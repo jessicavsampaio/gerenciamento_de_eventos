@@ -24,7 +24,7 @@ export function CardCriarEvento() {
                         <BiMap />
                         <label htmlFor="localDoEvento">Local: </label>
                     </div>
-                    <Link to={`/src/pages/Locais/locais.jsx`}>
+                    <Link to={`/local`}>
                         Criar novo local
                     </Link>
                     <select id="localDoEvento" name="locais" required>
@@ -35,7 +35,7 @@ export function CardCriarEvento() {
                         <BiPurchaseTag />
                         <label htmlFor="categoriaDoEvento">Categoria: </label>
                     </div>
-                    <Link to={`/src/pages/Categorias/categorias.jsx`}>
+                    <Link to={`/categoria`}>
                         Criar nova categoria
                     </Link>
                     <select id="categoriaDoEvento" name="categorias" required>
