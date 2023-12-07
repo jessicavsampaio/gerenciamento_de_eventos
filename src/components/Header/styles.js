@@ -9,7 +9,7 @@ export const HeaderDiv = styled.div`
     align-items: center;
     font-size: 20px;
     width: 100%;
-    position: relative;
+    position: fixed;
     top: 0;
     
     > div > a {
