@@ -15,23 +15,23 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/src/pages/CriarEvento/criarEvento.jsx",
+    path: "/evento",
     element: <CriarEvento />,
   },
   {
-    path: "/src/pages/Categorias/categorias.jsx",
+    path: "/categoria",
     element: <Categorias />,
   },
   {
-    path: "/src/pages/Locais/locais.jsx",
+    path: "/local",
     element: <Locais />,
   },
   {
-    path: "/src/pages/Login/login.jsx",
+    path: "/login",
     element: <Login />,
   },
   {
-    path: "/src/pages/Cadastro/cadastro.jsx",
+    path: "/cadastro",
     element: <Cadastro />,
   }
 ]);
