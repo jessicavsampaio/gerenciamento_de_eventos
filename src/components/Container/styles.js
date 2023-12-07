@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerDiv = styled.div`
     color: #ffffff;
-    margin: 40px 480px 20px;
+    margin: 120px 480px 20px;
     font-size: 14px;
     display: flex;
     align-items: center;
