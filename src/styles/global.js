@@ -10,6 +10,6 @@ export default createGlobalStyle`
 
     html, body, #root {
         background-color: #776B5D;
-        height: 100%;
+        min-height: 100vh;
     }
 `;
