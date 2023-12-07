@@ -5,14 +5,12 @@ import { CardCriarLocais } from "../../components/CardCriarLocais";
 export function Locais() {
     return (
         <div>
-            <div>
-                <Header />
-            </div>
-            <Section title="Criar local" />
-            <CardCriarLocais />
-            <div>
-                <Footer />
-            </div>
+            <Header />
+            <body>
+                <Section title="Criar local" />
+                <CardCriarLocais />
+            </body>
+            <Footer />
         </div>
 
     )

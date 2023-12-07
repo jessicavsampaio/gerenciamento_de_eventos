@@ -6,15 +6,16 @@ import { SectionLogin } from "../../components/SectionLogin/index";
 export function Login() {
     return (
         <div>
-            <div>
-                <Header />
-            </div>
-            <Section title="Login" />
-            <SectionLogin />
-            <div>
-                <Footer />
-            </div>
+            <Header />
+            <body>
+                <Section title="Login" />
+                <SectionLogin />
+            </body>
+            <Footer />
         </div>
+
+
+
 
     )
 }

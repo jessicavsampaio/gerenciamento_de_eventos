@@ -5,17 +5,14 @@ import { CardCriarCategoria } from "../../components/CardCriarCategoria";
 export function Categorias() {
     return (
         <div>
-            <div>
-                <Header />
-            </div>
-            <Section title="Criar categoria" />
-            <CardCriarCategoria />
-            <div>
+            <Header />
+            <body>
+                <Section title="Criar categoria" />
+                <CardCriarCategoria />
+            </body>
+            <Footer />
 
-            </div>
-            <div>
-                <Footer />
-            </div>
+
         </div>
 
     )

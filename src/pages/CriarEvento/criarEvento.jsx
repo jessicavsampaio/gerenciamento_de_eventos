@@ -5,18 +5,15 @@ import { Section } from "../../components/Section";
 
 export function CriarEvento() {
     return (
+
         <div>
-            <div>
-                <Header />
-            </div>
-            <div>
+            <Header />
+            <body>
                 <Section title="Criar evento" />
                 <CardCriarEvento />
-            </div>
-            <div>
-                <Footer />
-            </div>
-        </div>
+            </body>
+            <Footer />
+        </div >
 
     )
 }

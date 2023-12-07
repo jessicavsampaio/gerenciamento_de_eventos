@@ -6,15 +6,17 @@ import { SectionCadastro } from "../../components/SectionCadastro/index";
 export function Cadastro() {
     return (
         <div>
-            <div>
-                <Header />
-            </div>
-            <Section title="Cadastro" />
-            <SectionCadastro />
-            <div>
-                <Footer />
-            </div>
+            <Header />
+            <body>
+                <Section title="Cadastro" />
+                <SectionCadastro />
+            </body>
+            <Footer />
         </div>
+
+
+
+
 
     )
 }

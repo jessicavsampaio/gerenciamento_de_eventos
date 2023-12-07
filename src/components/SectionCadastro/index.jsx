@@ -25,7 +25,7 @@ export function SectionCadastro() {
                         <label htmlFor="senha">senha</label>
                     </div>
                     <input type="password" name="" id="senha" required />
-                    <Link to={`/src/pages/Login/login.jsx`}>
+                    <Link to={`/login`}>
                         Já possuo cadastro
                     </Link>
                     <button className="cadastroBtn" type="submit">Cadastrar</button>
