@@ -3,15 +3,12 @@ import { MdPlace } from "react-icons/md";
 import { useForm } from "react-hook-form"
 import { api } from '../../service/api';
 
-export function CardCriarLocais({ setId }) {
-
-
+export function CardCriarLocais() {
 
     const { register, handleSubmit } = useForm()
     const addEvent = data => api.post("http://localhost:3000/place", data)
-        .then(response => {
+        .then(() => {
             console.log("deu tudo certo.")
-            setId(response.data.id);
         })
         .catch(() => {
             console.log("deu tudo errado.")
@@ -30,9 +27,6 @@ export function CardCriarLocais({ setId }) {
                     <button className="cadastroLocalBtn" type="submit">Cadastrar Local</button>
                 </form>
             </div>
-
-
-
 
         </CardCriarLocaisDiv>
     )
