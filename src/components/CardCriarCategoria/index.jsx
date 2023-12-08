@@ -5,7 +5,7 @@ import {api} from '../../service/api';
 export function CardCriarCategoria() {
 
     const { register, handleSubmit } = useForm()
-    const addEvent = data => api.post("http://localhost:3000/category", data)
+    const addCategory = data => api.post("http://localhost:3000/category", data)
         .then(() => {
             console.log("deu tudo certo.")
         })
@@ -15,7 +15,7 @@ export function CardCriarCategoria() {
     return (
         <CardCriarCategoriaDiv>
             <div className='Container'>
-                <form onSubmit={handleSubmit(addEvent)}>
+                <form onSubmit={handleSubmit(addCategory)}>
                     <h3>Categoria</h3>
                     <div className="categoria">
                         <MdCategory />
