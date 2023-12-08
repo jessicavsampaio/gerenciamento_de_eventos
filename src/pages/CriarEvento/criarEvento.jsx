@@ -6,14 +6,14 @@ import { Section } from "../../components/Section";
 export function CriarEvento() {
     return (
 
-        <div>
+        <>
             <Header />
-            <body>
+            <>
                 <Section title="Criar evento" />
                 <CardCriarEvento />
-            </body>
+            </>
             <Footer />
-        </div >
+        </>
 
     )
 }

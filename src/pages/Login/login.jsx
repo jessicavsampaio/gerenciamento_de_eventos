@@ -5,17 +5,13 @@ import { SectionLogin } from "../../components/SectionLogin/index";
 
 export function Login() {
     return (
-        <div>
+        <>
             <Header />
             <body>
                 <Section title="Login" />
                 <SectionLogin />
             </body>
             <Footer />
-        </div>
-
-
-
-
+        </>
     )
 }
