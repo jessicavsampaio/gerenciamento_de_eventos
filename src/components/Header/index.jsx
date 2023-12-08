@@ -6,8 +6,8 @@ export function Header() {
     return (
 
         <HeaderDiv>
-            <div>
-                <a href="/"><h2>Gerenciamento de Eventos Culturais</h2></a>
+            <div style={{ display: "flex" }}>
+                <a href="/"><img src="../public/Imagem/LogoPoloNorte.png" alt="Logotipo de um urso polar" /></a>
             </div>
             <HeaderNav>
                 <Link to={`/`}>

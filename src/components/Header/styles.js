@@ -11,18 +11,16 @@ export const HeaderDiv = styled.div`
     width: 100%;
     position: fixed;
     top: 0;
-    
-    > div > a {
-        font-family: 'Roboto Slab', serif;
-        text-decoration: none;
-        color: #413E48;
+
+    > div > a > img {
+        width:160px;
     }
 `;
 
 export const HeaderNav = styled.nav`
     display:flex;
     gap: 30px;
-    
+
     > a {
         text-decoration: none;
         color: #413E48;
@@ -30,7 +28,7 @@ export const HeaderNav = styled.nav`
     }
 
     > a:hover {
-        color: #ffffff; 
+        color: #ffffff;
     }
 
     svg{
