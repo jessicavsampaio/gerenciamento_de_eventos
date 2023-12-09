@@ -7,7 +7,7 @@ export function Header() {
 
         <HeaderDiv>
             <div style={{ display: "flex" }}>
-                <a href="/"><img src="../public/Imagem/LogoPoloNorte.png" alt="Logotipo de um urso polar" /></a>
+                <a href="/"><img src="../Imagem/LogoPoloNorte.png" alt="Logotipo de um urso polar" /></a>
             </div>
             <HeaderNav>
                 <Link to={`/`}>

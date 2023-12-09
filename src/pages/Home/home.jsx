@@ -11,7 +11,6 @@ export function Home() {
                 <div>
                     <Container title="Eventos" />
                     <CardEvent />
-                    <CardEvent />
                 </div>
             </>
             <Footer />

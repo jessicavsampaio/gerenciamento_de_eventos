@@ -1,7 +1,8 @@
 import { CardCriarCategoriaDiv } from './styles'
 import { MdCategory } from "react-icons/md";
 import { useForm } from "react-hook-form"
-import {api} from '../../service/api';
+import { api } from '../../service/api';
+
 export function CardCriarCategoria() {
 
     const { register, handleSubmit } = useForm()

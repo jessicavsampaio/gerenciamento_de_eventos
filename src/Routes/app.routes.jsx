@@ -6,6 +6,7 @@ import { Categorias } from '../pages/Categorias/categorias.jsx'
 import { Locais } from '../pages/Locais/locais.jsx'
 import { Login } from '../pages/Login/login.jsx'
 import { Cadastro } from '../pages/Cadastro/cadastro.jsx'
+import { EditarEvento } from '../pages/EditarEvento/editarEvento.jsx'
 
 export const routes = createBrowserRouter([
     {
@@ -31,5 +32,9 @@ export const routes = createBrowserRouter([
     {
         path: "/cadastro",
         element: <Cadastro />,
+    },
+    {
+        path: "/editarEvento/:id",
+        element: <EditarEvento />,
     }
 ]);

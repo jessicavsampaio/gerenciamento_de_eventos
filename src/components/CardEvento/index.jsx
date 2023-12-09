@@ -1,37 +1,68 @@
 import { CardEventDiv } from './styles'
 import { BiCalendar, BiMap, BiPurchaseTag } from 'react-icons/bi';
+import { useEffect, useState } from 'react';
+import { api } from '../../service/api';
+import { Link } from 'react-router-dom';
 
 export function CardEvent() {
+
+    const [cards, setCards] = useState([])
+
+    useEffect(() => {
+        api.get("/event")
+            .then((response) => {
+                setCards(response.data)
+            })
+
+            .catch(() => {
+                console.log("deu ruim!!!!")
+            })
+
+    }, [])
+
     return (
-        <CardEventDiv>
-            <div>
-                <div>
-                    <h3>Front-end Day</h3>
-                    <div className="CardEventInfo">
-                        <BiCalendar />
-                        <p>23/01/2024 08:00:00</p>
-                    </div>
-                    <div className="CardEventInfo">
-                        <BiMap />
-                        <p>Fortaleza</p>
-                    </div>
-                    <div className="CardEventInfo">
-                        <BiPurchaseTag />
-                        <p>Educação</p>
-                    </div>
-                </div>
-                <div className="CardEventBtn">
-                    <button>Excluir evento</button>
-                    <button>Editar evento</button>
-                </div>
-            </div>
-            <div className="CardEventDescription">
-                <p><strong>Descrição:</strong></p>
-                <p>Um evento voltado para os amantes de Front-end ou para quem deseja expandir horizontes.</p>
-            </div>
 
+        <div>
 
+            {cards.map((event) => {
 
-        </CardEventDiv>
+                return (
+
+                    <CardEventDiv key={event.id}>
+
+                        <div>
+                            <div>
+                                <h3>{event.name}</h3>
+                                <div className="CardEventInfo">
+                                    <BiCalendar />
+                                    <p>{event.date}</p>
+                                </div>
+                                <div className="CardEventInfo">
+                                    <BiMap />
+                                    <p>{event.place}</p>
+                                </div>
+                                <div className="CardEventInfo">
+                                    <BiPurchaseTag />
+                                    <p>{event.category}</p>
+                                </div>
+                            </div>
+                            <div className="CardEventBtn">
+                                <button>Excluir evento</button>
+                                <Link to={`/editarEvento/${event.id}`}>
+                                    <button>Editar evento</button>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="CardEventDescription">
+                            <p><strong>Descrição:</strong></p>
+                            <p>{event.description}</p>
+                        </div>
+
+                    </CardEventDiv>
+
+                )
+            })}
+        </div>
+
     )
 }
