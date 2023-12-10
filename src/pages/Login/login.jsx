@@ -1,4 +1,3 @@
-import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { SectionLogin } from "../../components/SectionLogin/index";
@@ -11,7 +10,6 @@ export function Login() {
                 <Section title="Login" />
                 <SectionLogin />
             </body>
-            <Footer />
         </>
     )
 }

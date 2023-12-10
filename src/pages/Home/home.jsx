@@ -1,5 +1,4 @@
 import { CardEvent } from "../../components/CardEvento";
-import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Container } from "../../components/Container";
 import { SearchBar } from "../../components/SearchBar";
@@ -10,7 +9,7 @@ export function Home() {
     const [searchTerm, setSearchTerm] = useState('')
     const [filteredEvents, setFilteredEvents] = useState([])
     const [shouldUpdate, setShouldUpdate] = useState(false);
-    
+
     useEffect(() => {
         if(searchTerm) {
             api.get(`/eventsByCategory/${searchTerm}`)
@@ -52,17 +51,14 @@ export function Home() {
 
     return (
         <>
-            <>
                 <Header />
                 <div>
                     <SearchBar onFilter={filter} />
                     <Container title="Eventos">
-                        
+
                     </Container>
                     <CardEvent events={filteredEvents} onDeleteEvent={handleDeleteEvent} />
                 </div>
-            </>
-            <Footer />
         </>
 
     )

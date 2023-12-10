@@ -1,4 +1,3 @@
-import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { BiCalendar, BiMap, BiPurchaseTag } from 'react-icons/bi';
@@ -57,7 +56,6 @@ export function EditarEvento() {
 
         <>
             <Header />
-            <>
                 <Section title="Editar evento" />
                 <div>
                     <form onSubmit={handleSubmit(editEvent)}>
@@ -120,8 +118,6 @@ export function EditarEvento() {
                     </form>
 
                 </div>
-            </>
-            <Footer />
         </>
 
     )
