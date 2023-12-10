@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const CardCriarEventoDiv = styled.div`
     background-color: #413E48;
     border-radius: 15px;
-    margin: 0 480px 15px;
+    margin-bottom: 15px;
+    width: 700px;
+    height: 700px;
     padding: 40px;
 
     h3 {
@@ -45,13 +47,13 @@ export const CardCriarEventoDiv = styled.div`
 
     a {
         color:#fff;
-    
+
     }
 
     a:hover{
         color: #ff9000;
     }
-       
+
     .cadastroEventoBtn {
         border-radius: 15px;
         padding: 7px;

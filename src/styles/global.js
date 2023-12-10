@@ -11,5 +11,8 @@ export default createGlobalStyle`
     html, body, #root {
         background-color: #776B5D;
         min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 `;

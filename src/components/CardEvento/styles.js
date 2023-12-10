@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const CardEventDiv = styled.div`
     background-color: #413E48;
     border-radius: 15px;
-    margin: 0 480px 15px;
+    margin-bottom: 15px;
+    width: 700px;
     padding: 40px;
 
     h3 {
@@ -55,10 +56,12 @@ export const CardEventDiv = styled.div`
 
     .CardEventBtn button:first-child {
         background-color: #a3a0a0;
+        width: 100px;
     }
 
     .CardEventBtn button:last-child {
         background-color: #ff9000;
+        width: 100px;
     }
 
     .CardEventDescription {

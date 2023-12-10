@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const ContainerDiv = styled.div`
     color: #ffffff;
-    margin: 120px 480px 20px;
+    margin-bottom: 20px;
+    margin-top: 120px;
     font-size: 14px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 
     svg {

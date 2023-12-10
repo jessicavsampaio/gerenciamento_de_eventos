@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const CardCriarCategoriaDiv = styled.div`
     background-color: #413E48;
     border-radius: 15px;
-    margin: 0 480px 15px;
+    margin-bottom: 15px;
+    width: 700px;
+    height: 200px;
     padding: 40px;
 
     h3 {
@@ -15,6 +17,7 @@ export const CardCriarCategoriaDiv = styled.div`
     .Section {
         display: flex;
         flex-direction: column;
+        align-itens: center;
         gap: 5px;
     }
 
@@ -38,6 +41,7 @@ export const CardCriarCategoriaDiv = styled.div`
     }
 
     .cadastroCategoriaBtn {
+        margin-left: 10px;
         border-radius: 15px;
         padding: 7px;
         border: none;

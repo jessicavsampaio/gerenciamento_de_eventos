@@ -3,8 +3,10 @@ import styled from "styled-components";
 export const SectionLoginDiv = styled.div`
     background-color: #413E48;
     border-radius: 15px;
-    margin: 0 480px 15px;
+    margin-bottom: 15px;
+    width: 700px;
     padding: 40px;
+    height: 360px;
 
     h3 {
         font-size: 24px;
@@ -55,7 +57,7 @@ export const SectionLoginDiv = styled.div`
     .linkCriarConta{
       justify-content: center;
       margin-top: 10px;
-      
+
     }
     .linkStyle{
       color: #ff9000;

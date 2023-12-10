@@ -3,13 +3,19 @@ import styled from "styled-components";
 export const CardCriarLocaisDiv = styled.div`
     background-color: #413E48;
     border-radius: 15px;
-    margin: 0 480px 15px;
+    margin-bottom: 15px;
+    width: 700px;
     padding: 40px;
+    height: 200px;
+    display: flex;
+    align-itens: center;
+    flex-direction: column;
 
     h3 {
         font-size: 24px;
         color: #ff9000;
         margin-bottom: 10px;
+        text-align: left;
     }
 
     .Section {
@@ -38,6 +44,7 @@ export const CardCriarLocaisDiv = styled.div`
     }
 
     .cadastroLocalBtn {
+        margin-left: 10px;
         border-radius: 15px;
         padding: 7px;
         border: none;
