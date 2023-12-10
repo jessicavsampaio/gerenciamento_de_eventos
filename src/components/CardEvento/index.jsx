@@ -1,36 +1,23 @@
 import { CardEventDiv } from './styles'
 import { BiCalendar, BiMap, BiPurchaseTag } from 'react-icons/bi';
-import { useEffect, useState } from 'react';
-import { api } from '../../service/api';
 import { Link } from 'react-router-dom';
-import { ExcluirEvento } from '../DeletarEvento/deletarEvento';
+import { useState } from 'react';
 
-export function CardEvent() {
-
-    const [cards, setCards] = useState([])
-
-    useEffect(() => {
-        api.get("/event")
-            .then((response) => {
-                setCards(response.data)
-            })
-
-            .catch(() => {
-                console.log("deu ruim!!!!")
-            })
-
-    }, [])
+export function CardEvent({ events, onDeleteEvent }) {
+    const [deleteClicked, setDeleteClicked] = useState(false);
+    const handleDeleteEvent = (eventId) => {
+        setDeleteClicked(true);
+        if (onDeleteEvent) {
+            onDeleteEvent(eventId);
+        }
+    }
 
     return (
-
         <div>
-
-            {cards.map((event) => {
+            {events.map((event) => {
 
                 return (
-
                     <CardEventDiv key={event.id}>
-
                         <div>
                             <div>
                                 <h3>{event.name}</h3>
@@ -48,7 +35,7 @@ export function CardEvent() {
                                 </div>
                             </div>
                             <div className="CardEventBtn">
-                                <ExcluirEvento id={event.id} filtro={setCards} />
+                                <button onClick={() => handleDeleteEvent(event.id)}>Excluir evento</button>
                                 <Link to={`/editarEvento/${event.id}`}>
                                     <button>Editar evento</button>
                                 </Link>
