@@ -3,6 +3,7 @@ import { BiCalendar, BiMap, BiPurchaseTag } from 'react-icons/bi';
 import { useEffect, useState } from 'react';
 import { api } from '../../service/api';
 import { Link } from 'react-router-dom';
+import { ExcluirEvento } from '../DeletarEvento/deletarEvento';
 
 export function CardEvent() {
 
@@ -47,7 +48,7 @@ export function CardEvent() {
                                 </div>
                             </div>
                             <div className="CardEventBtn">
-                                <button>Excluir evento</button>
+                                <ExcluirEvento id={event.id} filtro={setCards} />
                                 <Link to={`/editarEvento/${event.id}`}>
                                     <button>Editar evento</button>
                                 </Link>
