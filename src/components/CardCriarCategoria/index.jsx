@@ -6,7 +6,7 @@ import { api } from '../../service/api';
 export function CardCriarCategoria() {
 
     const { register, handleSubmit } = useForm()
-    const addCategory = data => api.post("http://localhost:3000/category", data)
+    const addCategory = data => api.post("/category", data)
         .then(() => {
             console.log("deu tudo certo.")
         })

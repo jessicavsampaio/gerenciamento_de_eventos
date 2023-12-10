@@ -6,7 +6,7 @@ import { api } from '../../service/api';
 export function CardCriarLocais() {
 
     const { register, handleSubmit } = useForm()
-    const addEvent = data => api.post("http://localhost:3000/place", data)
+    const addEvent = data => api.post("/place", data)
         .then(() => {
             console.log("deu tudo certo.")
         })
