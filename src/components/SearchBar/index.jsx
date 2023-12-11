@@ -32,7 +32,7 @@ export function SearchBar({ onFilter }) {
                     type="text"
                     placeholder="Fazer uma pesquisa"
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => setSearchTerm(e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1))}
                 />
                 <button onClick={handleSearch}>
                     <BiSearch />
