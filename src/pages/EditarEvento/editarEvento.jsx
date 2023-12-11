@@ -64,21 +64,21 @@ export function EditarEvento() {
                         <div className="formLabel">
                             <label htmlFor="nomeDoEvento">Nome: </label>
                         </div>
-
-                        <input id="nomeDoEvento" type="text" placeholder="Nome do evento" maxLength={100} required {...register("name")} />
-
+                        <div className="CardEventInfo">
+                            <input className="rPill" id="nomeDoEvento" type="text" placeholder="Nome do evento" maxLength={100} required {...register("name")} />
+                        </div>
                         <div className="formLabel">
                             <BiCalendar />
-                            <label htmlFor="date">Data: </label>
+                            <label className="formLabel2" htmlFor="date">Data: </label>
                         </div>
 
-                        <input type="date" name="date" id="date" placeholder="Data" required {...register("date")} />
+                        <input className="rPill" type="date" name="date" id="date" placeholder="Data" required {...register("date")} />
 
                         <div className="formLabel">
                             <BiMap />
-                            <label htmlFor="localDoEvento">Local: </label>
+                            <label className="formLabel2" htmlFor="localDoEvento">Local: </label>
                         </div>
-
+                        <div className="verticalizar">
                         <Link to={`/local`}>
                             Criar novo local
                         </Link>
@@ -90,12 +90,12 @@ export function EditarEvento() {
                                 )
                             })}
                         </select>
-
+                        </div>
                         <div className="formLabel">
                             <BiPurchaseTag />
-                            <label htmlFor="categoriaDoEvento">Categoria: </label>
+                            <label className="formLabel2" htmlFor="categoriaDoEvento">Categoria: </label>
                         </div>
-
+                        <div className="verticalizar">
                         <Link to={`/categoria`}>
                             Criar nova categoria
                         </Link>
@@ -107,15 +107,17 @@ export function EditarEvento() {
                                 )
                             })}
                         </select>
-
+                        </div>
                         <div className="formLabel">
                             <BsFileText />
                             <label htmlFor="descricaoDoEvento">Descrição: </label>
                         </div>
-                        <textarea id="descricaoDoEvento" name="descricaoDoEvento" rows="5" placeholder="Descrição do evento" required {...register("description")} />
-
-                        <button className='cadastroEventoBtn' type="submit">Editar evento</button>
-
+                        <div className="verticalizar">
+                        <textarea className="rPill" id="descricaoDoEvento" name="descricaoDoEvento" rows="5" placeholder="Descrição do evento" required {...register("description")} />
+                            <div className="rCentral">
+                        <button className='cadastroEventoBtn' type="submit">Salvar</button>
+                        </div>
+                        </div>
                     </form>
 
                 </EditarEventoDiv>

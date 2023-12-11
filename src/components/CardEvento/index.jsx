@@ -22,7 +22,7 @@ export function CardEvent({ events, onDeleteEvent }) {
                             <div>
                                 <h3>{event.name}</h3>
                                 <div className="CardEventInfo">
-                                    <BiCalendar />
+                                    <BiCalendar />  
                                     <p>{event.date}</p>
                                 </div>
                                 <div className="CardEventInfo">
