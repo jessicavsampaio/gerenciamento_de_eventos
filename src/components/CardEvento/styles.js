@@ -7,6 +7,14 @@ export const CardEventDiv = styled.div`
     width: 700px;
     padding: 40px;
 
+    @media (max-width: 768px) {
+      width: 550px;
+    }
+
+    @media (max-width: 600px) {
+      width: 360px;
+    }
+
     h3 {
         font-size: 24px;
         color: #ff9000;

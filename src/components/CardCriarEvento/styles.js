@@ -5,8 +5,16 @@ export const CardCriarEventoDiv = styled.div`
     border-radius: 15px;
     margin-bottom: 15px;
     width: 700px;
-    height: 700px;
+    height: 100%;
     padding: 40px;
+
+    @media (max-width: 768px) {
+      width: 550px;
+    }
+
+    @media (max-width: 600px) {
+      width: 360px;
+    }
 
     h3 {
         font-size: 24px;

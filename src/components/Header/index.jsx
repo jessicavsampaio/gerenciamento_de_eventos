@@ -16,10 +16,10 @@ export function Header() {
                 <Link to={`/evento`}>
                     Criar eventos
                 </Link>
-                <Link to={`/categoria`}>
+                <Link to={`/categoria`} className="hide-link">
                     Categorias
                 </Link>
-                <Link to={`/local`}>
+                <Link to={`/local`} className="hide-link">
                     Locais
                 </Link>
                 <Link to={`/login`}>
