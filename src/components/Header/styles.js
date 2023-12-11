@@ -11,6 +11,7 @@ export const HeaderDiv = styled.div`
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 1;
 
     @media (max-width: 600px){
       padding: 5px;

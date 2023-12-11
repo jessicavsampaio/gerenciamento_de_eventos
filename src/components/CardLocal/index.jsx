@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CardLocalDiv } from './styles'
 
 export function CardPlace({ places, onEdit }) {
     const [editingPlaceId, setEditingPlaceId] = useState(null)
@@ -21,6 +22,7 @@ export function CardPlace({ places, onEdit }) {
     }
 
     return (
+      <CardLocalDiv>
         <div>
             <h3>Lista de locais</h3>
             <ul>
@@ -48,5 +50,6 @@ export function CardPlace({ places, onEdit }) {
                 ))}
             </ul>
         </div>
-    );
+      </CardLocalDiv>
+      );
 }

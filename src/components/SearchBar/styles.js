@@ -19,7 +19,7 @@ export const Search = styled.div`
     .searchBar button {
         width: 35px;
         height: 35px;
-        border-radius: 5px;
+        border-radius: 25px;
     }
 
     svg {
@@ -30,15 +30,17 @@ export const Search = styled.div`
 
     input {
         position: relative;
-        border-radius: 15px;
+        border-radius: 25px;
         outline: none;
         cursor: pointer;
-        padding: 10px 0 10px 5px;
-        width: 25vw;
+        padding: 10px 0 10px 15px;
+        width: 250px;
     }
 
     fieldset {
         text-align: center;
+        margin-bottom: 15px;
+        padding: 0 0 0 5px;
     }
 
     fieldset div {

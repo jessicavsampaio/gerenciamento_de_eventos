@@ -53,6 +53,7 @@ export const CardCriarLocaisDiv = styled.div`
 
     .cadastroLocalBtn {
         margin-left: 10px;
+        margin-bottom: 20px;
         border-radius: 15px;
         padding: 7px;
         border: none;

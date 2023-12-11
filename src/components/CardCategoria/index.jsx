@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CardCategoriaDiv } from './styles'
 
 export function CardCategory({ categories, onEdit }) {
     const [editingCategoryId, setEditingCategoryId] = useState(null)
@@ -21,6 +22,7 @@ export function CardCategory({ categories, onEdit }) {
     }
 
     return (
+        <CardCategoriaDiv>
         <div>
             <h3>Lista de Categorias</h3>
             <ul>
@@ -48,5 +50,6 @@ export function CardCategory({ categories, onEdit }) {
                 ))}
             </ul>
         </div>
+        </CardCategoriaDiv>
     );
 }
