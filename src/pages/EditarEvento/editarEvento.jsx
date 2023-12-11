@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form"
 import { useState, useEffect } from "react";
 import { api } from '../../service/api';
 import { useNavigate, useParams } from 'react-router-dom';
+import { EditarEventoDiv } from "./styles";
 
 export function EditarEvento() {
     const { id } = useParams()
@@ -57,7 +58,7 @@ export function EditarEvento() {
         <>
             <Header />
                 <Section title="Editar evento" />
-                <div>
+                <EditarEventoDiv>
                     <form onSubmit={handleSubmit(editEvent)}>
                         <h3>Editar evento</h3>
                         <div className="formLabel">
@@ -117,7 +118,7 @@ export function EditarEvento() {
 
                     </form>
 
-                </div>
+                </EditarEventoDiv>
         </>
 
     )
