@@ -5,46 +5,57 @@ import { api } from '../../service/api';
 import { useState, useEffect } from 'react';
 import { CardPlace } from '../CardLocal'
 
+
 export function CardCriarLocais() {
-    const [place, setPlace] = useState([])
+    const [places, setPlaces] = useState([]);
     const { register, handleSubmit } = useForm()
 
-    const Listplaces = async () => {
+    const ListPlaces = async () => {
         try {
             const response = await api.get('/listPlace');
-            setPlace(response.data);
+            setPlaces(response.data);
         } catch (error) {
             console.error('Erro ao obter lista de locais:', error);
         }
     };
 
     useEffect(() => {
-        Listplaces();
+        ListPlaces();
     }, []);
 
-    const addPLace = async (data) => await api.post("/place", data)
+    const addPlace = async (data) => await api.post("/place", data)
         .then(() => {
             console.log("deu tudo certo.")
-            Listplaces();
+            ListPlaces();
         })
         .catch(() => {
             console.log("deu tudo errado.")
         })
+
+    const editPlace = async (placeId, newName) => {
+        try {
+            await api.put(`/place/${placeId}`, { name: newName });
+            console.log("Local editado com sucesso.");
+            ListPlaces();
+        } catch (error) {
+            console.log("Erro ao editar local.")
+        }
+    }
+
     return (
         <CardCriarLocaisDiv>
             <div className='Container'>
-                <form onSubmit={handleSubmit(addPLace)}>
+                <form onSubmit={handleSubmit(addPlace)}>
                     <h3>Local</h3>
                     <div className="local">
                         <MdPlace />
-                        <p>Local: </p>
+                        <p>Locais: </p>
                     </div>
                     <input type="text" name="local" id="local" required {...register("name")} />
-
                     <button className="cadastroLocalBtn" type="submit">Cadastrar Local</button>
                 </form>
             </div>
-            <CardPlace places={place} />
+            <CardPlace places={places} onEdit={editPlace} />
         </CardCriarLocaisDiv>
     )
 }

@@ -30,6 +30,17 @@ export function CardCriarCategoria() {
         .catch(() => {
             console.log("deu tudo errado.")
         })
+
+    const editCategory = async (categoryId, newName) => {
+        try {
+            await api.put(`/category/${categoryId}`, { name: newName });
+            console.log("Categoria editada com sucesso.");
+            ListCategories();
+        } catch (error) {
+            console.log("Erro ao editar categoria.")
+        }
+    }
+
     return (
         <CardCriarCategoriaDiv>
             <div className='Container'>
@@ -43,7 +54,7 @@ export function CardCriarCategoria() {
                     <button className="cadastroCategoriaBtn" type="submit">Cadastrar Categoria</button>
                 </form>
             </div>
-            <CardCategory categories={categories} />
+            <CardCategory categories={categories} onEdit={editCategory} />
         </CardCriarCategoriaDiv>
     )
 }
