@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CardLocalDiv } from './styles'
 
-export function CardPlace({ places, onEdit }) {
+export function CardPlace({ places, onEdit, onDelete }) {
     const [editingPlaceId, setEditingPlaceId] = useState(null)
     const [editedPlaceName, setEditedPlaceName] = useState('')
 
@@ -19,6 +19,10 @@ export function CardPlace({ places, onEdit }) {
         onEdit(placeId, editedPlaceName)
         setEditingPlaceId(null)
         setEditedPlaceName('')
+    }
+
+    const handleDeleteClick = (placeId) => {
+        onDelete(placeId)
     }
 
     return (
@@ -44,6 +48,7 @@ export function CardPlace({ places, onEdit }) {
                             <>
                                 {place.name}
                                 <button onClick={() => handleEditClick(place.id, place.name)}>Editar</button>
+                                <button onClick={() => handleDeleteClick(place.id)}>Excluir</button>
                             </>
                         )}
                     </li>

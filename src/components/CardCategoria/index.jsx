@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CardCategoriaDiv } from './styles'
 
-export function CardCategory({ categories, onEdit }) {
+export function CardCategory({ categories, onEdit, onDelete }) {
     const [editingCategoryId, setEditingCategoryId] = useState(null)
     const [editedCategoryName, setEditedCategoryName] = useState('')
 
@@ -19,6 +19,10 @@ export function CardCategory({ categories, onEdit }) {
         onEdit(categoryId, editedCategoryName)
         setEditingCategoryId(null)
         setEditedCategoryName('')
+    }
+
+    const handleDeleteClick = (categoryId) => {
+        onDelete(categoryId)
     }
 
     return (
@@ -44,6 +48,7 @@ export function CardCategory({ categories, onEdit }) {
                             <>
                                 {category.name}
                                 <button onClick={() => handleEditClick(category.id, category.name)}>Editar</button>
+                                <button onClick={() => handleDeleteClick(category.id)}>Excluir</button>
                             </>
                         )}
                     </li>

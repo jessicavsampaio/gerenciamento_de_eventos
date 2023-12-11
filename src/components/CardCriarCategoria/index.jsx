@@ -11,21 +11,21 @@ export function CardCriarCategoria() {
 
     const ListCategories = async () => {
         try {
-            const response = await api.get('/category');
-            setCategories(response.data);
+            const response = await api.get('/category')
+            setCategories(response.data)
         } catch (error) {
-            console.error('Erro ao obter lista de categorias:', error);
+            console.error('Erro ao obter lista de categorias:', error)
         }
     };
 
     useEffect(() => {
-        ListCategories();
+        ListCategories()
     }, []);
 
     const addCategory = async (data) => await api.post("/category", data)
         .then(() => {
             console.log("deu tudo certo.")
-            ListCategories();
+            ListCategories()
         })
         .catch(() => {
             console.log("deu tudo errado.")
@@ -33,11 +33,22 @@ export function CardCriarCategoria() {
 
     const editCategory = async (categoryId, newName) => {
         try {
-            await api.put(`/category/${categoryId}`, { name: newName });
-            console.log("Categoria editada com sucesso.");
-            ListCategories();
+            await api.put(`/category/${categoryId}`, { name: newName })
+            console.log("Categoria editada com sucesso.")
+            ListCategories()
         } catch (error) {
             console.log("Erro ao editar categoria.")
+        }
+    }
+
+    const deleteCategory = async (categoryId) => {
+        try {
+            await api.delete(`/category/${categoryId}`)
+            console.log("Categoria excluída com sucesso.")
+            ListCategories()
+            alert("Categoria excluída.")
+        } catch (error) {
+            alert("Erro ao excluir categoria. Possivelmente há eventos criados com esta categoria.")
         }
     }
 
@@ -54,7 +65,7 @@ export function CardCriarCategoria() {
                     <button className="cadastroCategoriaBtn" type="submit">Cadastrar Categoria</button>
                 </form>
             </div>
-            <CardCategory categories={categories} onEdit={editCategory} />
+            <CardCategory categories={categories} onEdit={editCategory} onDelete={deleteCategory} />
         </CardCriarCategoriaDiv>
     )
 }
