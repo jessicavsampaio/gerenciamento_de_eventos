@@ -42,6 +42,17 @@ export function CardCriarLocais() {
         }
     }
 
+    const deletePlace = async (placeId) => {
+        try {
+            await api.delete(`/place/${placeId}`)
+            console.log("Local excluído com sucesso.")
+            ListPlaces()
+            alert("Local excluído.")
+        } catch (error) {
+            alert("Erro ao excluir local. Possivelmente há eventos criados com este local.")
+        }
+    }
+
     return (
         <CardCriarLocaisDiv>
             <div className='Container'>
@@ -55,7 +66,7 @@ export function CardCriarLocais() {
                     <button className="cadastroLocalBtn" type="submit">Cadastrar Local</button>
                 </form>
             </div>
-            <CardPlace places={places} onEdit={editPlace} />
+            <CardPlace places={places} onEdit={editPlace} onDelete={deletePlace} />
         </CardCriarLocaisDiv>
     )
 }
