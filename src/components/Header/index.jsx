@@ -11,7 +11,7 @@ export function Header() {
             </div>
             <HeaderNav>
                 <Link to={`/`}>
-                    Home
+                    Eventos
                 </Link>
                 <Link to={`/evento`}>
                     Criar eventos

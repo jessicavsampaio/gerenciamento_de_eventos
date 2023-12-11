@@ -15,5 +15,18 @@ export const CardCategoriaDiv = styled.div`
       border: none;
       color: #ffffff;
       background-color: #ff9000;
+      cursor: pointer;
     }
+
+    button:last-Child{
+      background-color: #a3a0a0;
+    }
+
+    button:hover{
+      opacity: 0.8;
+    }
+
+
+
+
 `;

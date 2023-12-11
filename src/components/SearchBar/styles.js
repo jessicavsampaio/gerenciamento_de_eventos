@@ -39,7 +39,7 @@ export const Search = styled.div`
 
     fieldset {
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 40px;
         padding: 0 0 0 5px;
     }
 

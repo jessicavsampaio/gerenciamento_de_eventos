@@ -59,11 +59,11 @@ export const CardCriarCategoriaDiv = styled.div`
         width: 140px;
         align-self: center;
         margin-top: 20px;
+        cursor: pointer;
     }
 
     .cadastroCategoriaBtn:hover {
         opacity: 0.8;
-        cursor: pointer;
     }
 
     @media (max-width: 600px){
