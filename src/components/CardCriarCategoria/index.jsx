@@ -2,13 +2,30 @@ import { CardCriarCategoriaDiv } from './styles'
 import { MdCategory } from "react-icons/md";
 import { useForm } from "react-hook-form"
 import { api } from '../../service/api';
+import { CardCategory } from '../CardCategoria';
+import { useState, useEffect } from 'react';
 
 export function CardCriarCategoria() {
-
+    const [categories, setCategories] = useState([]);
     const { register, handleSubmit } = useForm()
-    const addCategory = data => api.post("/category", data)
+
+    const ListCategories = async () => {
+        try {
+            const response = await api.get('/category');
+            setCategories(response.data);
+        } catch (error) {
+            console.error('Erro ao obter lista de categorias:', error);
+        }
+    };
+
+    useEffect(() => {
+        ListCategories();
+    }, []);
+
+    const addCategory = async (data) => await api.post("/category", data)
         .then(() => {
             console.log("deu tudo certo.")
+            ListCategories();
         })
         .catch(() => {
             console.log("deu tudo errado.")
@@ -26,6 +43,7 @@ export function CardCriarCategoria() {
                     <button className="cadastroCategoriaBtn" type="submit">Cadastrar Categoria</button>
                 </form>
             </div>
+            <CardCategory categories={categories} />
         </CardCriarCategoriaDiv>
     )
 }
